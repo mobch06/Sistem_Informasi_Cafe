@@ -173,7 +173,7 @@ Module TampilMenu
 
     Public Sub graph(kategori)
         Call openConn()
-        With DashboardWindows.Chart1
+        With DashboardWindows.Dashboard_Chart
             Dim sKategori As String = kategori
             Dim query As String = "SELECT * FROM menus WHERE kategori = '" & kategori & "'"
             cmd = New OdbcCommand(query, conn)
@@ -189,10 +189,25 @@ Module TampilMenu
             .Series(0).ChartType = SeriesChartType.Column
 
             For I As Integer = 0 To dt.Rows.Count - 1
-                .Series(0).Points.AddXY(dt.Rows(I)("nama"), dt.Rows(I)("dipesan"))
+                .Series(0).Points.AddXY(dt.Rows(I)("nama"), dt.Rows(I)("pesan"))
             Next
         End With
         Call closeConn()
     End Sub
+
+    Public Function GenerateOrderID()
+        Dim number As String = ""
+        Dim random As New Random()
+
+        For i As Integer = 0 To Convert.ToInt32(1) - 1
+            Dim n As Integer = random.Next(0, 10000)
+            number += n.ToString("D4")
+        Next
+        Return number
+    End Function
+
+
+
+
 
 End Module

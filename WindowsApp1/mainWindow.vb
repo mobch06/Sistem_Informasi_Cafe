@@ -53,13 +53,13 @@ Public Class mainWindow
     End Sub
     Private Sub ListDrinks_MouseClick(sender As Object, e As MouseEventArgs) Handles ListDrinks.MouseClick
         namaMenuBox.Text = ListDrinks.Items(ListDrinks.SelectedIndices(0)).SubItems(0).Text
-        kategoriLbl.Text = ListDrinks.Items(ListDrinks.SelectedIndices(0)).SubItems(0).Text
+        kategoriLbl.Text = ListDrinks.Items(ListDrinks.SelectedIndices(0)).SubItems(1).Text
         hargaMenuBox.Text = ListDrinks.Items(ListDrinks.SelectedIndices(0)).SubItems(2).Text
         jmlBox.Text = 0
     End Sub
     Private Sub ListDessert_MouseClick(sender As Object, e As MouseEventArgs) Handles ListDessert.MouseClick
         namaMenuBox.Text = ListDessert.Items(ListDessert.SelectedIndices(0)).SubItems(0).Text
-        kategoriLbl.Text = ListDessert.Items(ListDessert.SelectedIndices(0)).SubItems(0).Text
+        kategoriLbl.Text = ListDessert.Items(ListDessert.SelectedIndices(0)).SubItems(1).Text
         hargaMenuBox.Text = ListDessert.Items(ListDessert.SelectedIndices(0)).SubItems(2).Text
         jmlBox.Text = 0
     End Sub
@@ -133,26 +133,31 @@ Public Class mainWindow
     Private Sub checkoutBtn_Click(sender As Object, e As EventArgs) Handles checkoutBtn.Click
         If loginForm.login = True Then
             Call openConn()
+            Dim orderID As String = GenerateOrderID()
+
             For i As Integer = 0 To ListPesanan.Items.Count - 1
                 Dim seperator As String = ". "
                 Dim seperatorIndex = ListPesanan.Items(i).SubItems(2).Text.IndexOf(seperator)
                 Dim harga As Double
+                Dim status As Boolean = 0
 
                 If seperatorIndex >= 0 Then
                     Dim value As Double = ListPesanan.Items(i).SubItems(2).Text.Substring(seperatorIndex + seperator.Length)
                     harga = value
                 End If
-                query = "INSERT INTO `orders`(`id`, `user_id`, `kategori`, `nama`, `harga_menu`, `jumlah_di_pesan` , `total`, `status`)
+                query = "INSERT INTO `orders`(`id`, `order_id` `username`, `kategori`, `nama`, `harga`, `pesan` , `total`, `status`, `tanggal`)
                             VALUES
                         (
-                        '',
+                        'NULL',
+                        '" & orderID & "',
                         '" & loginForm.usernameTextBox.Text & "',
                         '" & ListPesanan.Items(i).SubItems(1).Text & "',
                         '" & ListPesanan.Items(i).SubItems(0).Text & "',
                         '" & harga & "',
                         '" & ListPesanan.Items(i).SubItems(1).Text & "',
                         '" & Val(ListPesanan.Items(i).SubItems(3).Text) & "',
-                        'Belum Selesai'
+                        '" & status & "',
+                        CURRENT_TIMESTAMP
                 )"
                 cmd = New OdbcCommand(query, conn)
                 cmd.ExecuteNonQuery()

@@ -5,10 +5,11 @@ Module ConnDB
     Public query As String
     Public cmd As OdbcCommand
     Public strConn As String = "server=localhost; user id=root; password=; database=dbcafeapp; dsn=dbcafe"
+    Public strcon As String = "server=mysql5045.site4now.net; user id=a74197_dbcafe password=killerbee; database=db_a74197_dbcafe; Dsn=dbcafeonline"
 
     Public Sub openConn()
         If conn.State = ConnectionState.Closed Then
-            conn.ConnectionString = strConn
+            conn.ConnectionString = strcon
             Try
                 conn.Open()
             Catch ex As OdbcException
@@ -26,5 +27,4 @@ Module ConnDB
             End Try
         End If
     End Sub
-
 End Module

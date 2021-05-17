@@ -128,34 +128,47 @@ Module TampilMenu
     Public Sub tampilSemuaPesanan()
         Call openConn()
 
-        query = New String("SELECT SUM(jumlah_di_pesan) sumJumlahPesanan From orders")
+        query = New String("SELECT SUM(pesan) sumJumlahPesanan From orders")
         cmd = New OdbcCommand(query, conn)
         Dim result = cmd.ExecuteScalar()
 
-        Dim sum As Integer = Convert.ToInt32(result.ToString())
-        WindowsApp1.DashboardWindows.Label4.Text = sum
+        If IsDBNull(result) Then
+            WindowsApp1.DashboardWindows.Label4.Text = "0"
+        Else
+            Dim sum As Integer = Convert.ToInt32(result.ToString())
+            WindowsApp1.DashboardWindows.Label4.Text = sum
+        End If
     End Sub
 
     Public Sub tampilBelumSelesai()
         Call openConn()
 
-        query = New String("SELECT SUM(jumlah_di_pesan) sumJumlahPesanan From orders WHERE status = 'Belum Selesai' ")
+        query = New String("SELECT SUM(pesan) sumJumlahPesanan From orders WHERE status = 0 ")
         cmd = New OdbcCommand(query, conn)
         Dim result = cmd.ExecuteScalar()
 
-        Dim sum As Integer = Convert.ToInt32(result.ToString())
-        WindowsApp1.DashboardWindows.Label6.Text = sum
+        If IsDBNull(result) Then
+            WindowsApp1.DashboardWindows.Label6.Text = "0"
+        Else
+            Dim sum As Integer = Convert.ToInt32(result.ToString())
+            WindowsApp1.DashboardWindows.Label6.Text = sum
+        End If
     End Sub
 
     Public Sub tampilSelesai()
         Call openConn()
 
-        query = New String("SELECT SUM(jumlah_di_pesan) sumJumlahPesanan From orders WHERE status = 'Selesai' ")
+        query = New String("SELECT SUM(pesan) sumJumlahPesanan From orders WHERE status = '1' ")
         cmd = New OdbcCommand(query, conn)
         Dim result = cmd.ExecuteScalar()
 
-        Dim sum As Integer = Convert.ToInt32(result.ToString())
-        WindowsApp1.DashboardWindows.Label5.Text = sum
+        If IsDBNull(result) Then
+            WindowsApp1.DashboardWindows.Label5.Text = "0"
+        Else
+            Dim sum As Integer = Convert.ToInt32(result.ToString())
+            WindowsApp1.DashboardWindows.Label5.Text = sum
+        End If
+
     End Sub
 
     Public Sub graph(kategori)

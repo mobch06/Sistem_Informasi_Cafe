@@ -22,9 +22,12 @@ Partial Class DashboardWindows
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -32,20 +35,21 @@ Partial Class DashboardWindows
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Menu_EditMenu = New System.Windows.Forms.GroupBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.menu_ubahKategoriBox = New System.Windows.Forms.ComboBox()
+        Me.menu_kategoriBox = New System.Windows.Forms.ComboBox()
+        Me.menu_ubahStatusBox = New System.Windows.Forms.ComboBox()
+        Me.menu_ubahHargaBox = New System.Windows.Forms.TextBox()
+        Me.menu_ubahNamaBox = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.menu_statusBox = New System.Windows.Forms.ComboBox()
+        Me.menu_hargaBox = New System.Windows.Forms.TextBox()
+        Me.menu_namaBox = New System.Windows.Forms.TextBox()
         Me.mLbl2 = New System.Windows.Forms.Label()
         Me.mLbl1 = New System.Windows.Forms.Label()
         Me.mLbl4 = New System.Windows.Forms.Label()
@@ -159,20 +163,21 @@ Partial Class DashboardWindows
         '
         'Menu_EditMenu
         '
-        Me.Menu_EditMenu.Controls.Add(Me.ComboBox2)
-        Me.Menu_EditMenu.Controls.Add(Me.TextBox3)
-        Me.Menu_EditMenu.Controls.Add(Me.TextBox5)
-        Me.Menu_EditMenu.Controls.Add(Me.TextBox6)
+        Me.Menu_EditMenu.Controls.Add(Me.Button12)
+        Me.Menu_EditMenu.Controls.Add(Me.menu_ubahKategoriBox)
+        Me.Menu_EditMenu.Controls.Add(Me.menu_kategoriBox)
+        Me.Menu_EditMenu.Controls.Add(Me.menu_ubahStatusBox)
+        Me.Menu_EditMenu.Controls.Add(Me.menu_ubahHargaBox)
+        Me.Menu_EditMenu.Controls.Add(Me.menu_ubahNamaBox)
         Me.Menu_EditMenu.Controls.Add(Me.Label7)
         Me.Menu_EditMenu.Controls.Add(Me.Label8)
         Me.Menu_EditMenu.Controls.Add(Me.Label9)
         Me.Menu_EditMenu.Controls.Add(Me.Label10)
         Me.Menu_EditMenu.Controls.Add(Me.Button6)
         Me.Menu_EditMenu.Controls.Add(Me.Button5)
-        Me.Menu_EditMenu.Controls.Add(Me.ComboBox1)
-        Me.Menu_EditMenu.Controls.Add(Me.TextBox4)
-        Me.Menu_EditMenu.Controls.Add(Me.TextBox2)
-        Me.Menu_EditMenu.Controls.Add(Me.TextBox1)
+        Me.Menu_EditMenu.Controls.Add(Me.menu_statusBox)
+        Me.Menu_EditMenu.Controls.Add(Me.menu_hargaBox)
+        Me.Menu_EditMenu.Controls.Add(Me.menu_namaBox)
         Me.Menu_EditMenu.Controls.Add(Me.mLbl2)
         Me.Menu_EditMenu.Controls.Add(Me.mLbl1)
         Me.Menu_EditMenu.Controls.Add(Me.mLbl4)
@@ -184,34 +189,55 @@ Partial Class DashboardWindows
         Me.Menu_EditMenu.TabStop = False
         Me.Menu_EditMenu.Text = "Edit Menu"
         '
-        'ComboBox2
+        'Button12
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(183, 353)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(141, 28)
-        Me.ComboBox2.TabIndex = 21
+        Me.Button12.Location = New System.Drawing.Point(35, 456)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(100, 46)
+        Me.Button12.TabIndex = 24
+        Me.Button12.Text = "Hapus"
+        Me.Button12.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'menu_ubahKategoriBox
         '
-        Me.TextBox3.Location = New System.Drawing.Point(183, 393)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(141, 26)
-        Me.TextBox3.TabIndex = 20
+        Me.menu_ubahKategoriBox.FormattingEnabled = True
+        Me.menu_ubahKategoriBox.Items.AddRange(New Object() {"maincourse", "sidedish", "dessert", "drinks"})
+        Me.menu_ubahKategoriBox.Location = New System.Drawing.Point(128, 313)
+        Me.menu_ubahKategoriBox.Name = "menu_ubahKategoriBox"
+        Me.menu_ubahKategoriBox.Size = New System.Drawing.Size(196, 28)
+        Me.menu_ubahKategoriBox.TabIndex = 23
         '
-        'TextBox5
+        'menu_kategoriBox
         '
-        Me.TextBox5.Location = New System.Drawing.Point(183, 313)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(141, 26)
-        Me.TextBox5.TabIndex = 19
+        Me.menu_kategoriBox.FormattingEnabled = True
+        Me.menu_kategoriBox.Items.AddRange(New Object() {"maincourse", "sidedish", "dessert", "drinks"})
+        Me.menu_kategoriBox.Location = New System.Drawing.Point(128, 62)
+        Me.menu_kategoriBox.Name = "menu_kategoriBox"
+        Me.menu_kategoriBox.Size = New System.Drawing.Size(196, 28)
+        Me.menu_kategoriBox.TabIndex = 22
         '
-        'TextBox6
+        'menu_ubahStatusBox
         '
-        Me.TextBox6.Location = New System.Drawing.Point(183, 273)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(141, 26)
-        Me.TextBox6.TabIndex = 18
+        Me.menu_ubahStatusBox.FormattingEnabled = True
+        Me.menu_ubahStatusBox.Items.AddRange(New Object() {"Rekomendasi", "Best Seller", "New", "Seasonal Menu"})
+        Me.menu_ubahStatusBox.Location = New System.Drawing.Point(128, 353)
+        Me.menu_ubahStatusBox.Name = "menu_ubahStatusBox"
+        Me.menu_ubahStatusBox.Size = New System.Drawing.Size(196, 28)
+        Me.menu_ubahStatusBox.TabIndex = 21
+        '
+        'menu_ubahHargaBox
+        '
+        Me.menu_ubahHargaBox.Location = New System.Drawing.Point(128, 393)
+        Me.menu_ubahHargaBox.Name = "menu_ubahHargaBox"
+        Me.menu_ubahHargaBox.Size = New System.Drawing.Size(196, 26)
+        Me.menu_ubahHargaBox.TabIndex = 20
+        '
+        'menu_ubahNamaBox
+        '
+        Me.menu_ubahNamaBox.Location = New System.Drawing.Point(128, 273)
+        Me.menu_ubahNamaBox.Name = "menu_ubahNamaBox"
+        Me.menu_ubahNamaBox.Size = New System.Drawing.Size(196, 26)
+        Me.menu_ubahNamaBox.TabIndex = 18
         '
         'Label7
         '
@@ -261,41 +287,35 @@ Partial Class DashboardWindows
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(126, 441)
+        Me.Button5.Location = New System.Drawing.Point(205, 456)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(100, 46)
         Me.Button5.TabIndex = 12
         Me.Button5.Text = "Ubah"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'menu_statusBox
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(183, 102)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(141, 28)
-        Me.ComboBox1.TabIndex = 11
+        Me.menu_statusBox.FormattingEnabled = True
+        Me.menu_statusBox.Items.AddRange(New Object() {"Rekomendasi", "Best Seller", "New", "Seasonal Menu"})
+        Me.menu_statusBox.Location = New System.Drawing.Point(128, 102)
+        Me.menu_statusBox.Name = "menu_statusBox"
+        Me.menu_statusBox.Size = New System.Drawing.Size(196, 28)
+        Me.menu_statusBox.TabIndex = 11
         '
-        'TextBox4
+        'menu_hargaBox
         '
-        Me.TextBox4.Location = New System.Drawing.Point(183, 142)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(141, 26)
-        Me.TextBox4.TabIndex = 10
+        Me.menu_hargaBox.Location = New System.Drawing.Point(128, 142)
+        Me.menu_hargaBox.Name = "menu_hargaBox"
+        Me.menu_hargaBox.Size = New System.Drawing.Size(196, 26)
+        Me.menu_hargaBox.TabIndex = 10
         '
-        'TextBox2
+        'menu_namaBox
         '
-        Me.TextBox2.Location = New System.Drawing.Point(183, 62)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(141, 26)
-        Me.TextBox2.TabIndex = 8
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(183, 22)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(141, 26)
-        Me.TextBox1.TabIndex = 7
+        Me.menu_namaBox.Location = New System.Drawing.Point(128, 22)
+        Me.menu_namaBox.Name = "menu_namaBox"
+        Me.menu_namaBox.Size = New System.Drawing.Size(196, 26)
+        Me.menu_namaBox.TabIndex = 7
         '
         'mLbl2
         '
@@ -336,13 +356,41 @@ Partial Class DashboardWindows
         '
         'Menu_DataMenu
         '
-        Me.Menu_DataMenu.AccessibleName = "menu"
+        Me.Menu_DataMenu.AccessibleName = ""
+        Me.Menu_DataMenu.AllowDrop = True
+        Me.Menu_DataMenu.AllowUserToAddRows = False
+        Me.Menu_DataMenu.AllowUserToDeleteRows = False
         Me.Menu_DataMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Menu_DataMenu.Location = New System.Drawing.Point(20, 16)
+        Me.Menu_DataMenu.Cursor = System.Windows.Forms.Cursors.Default
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Menu_DataMenu.DefaultCellStyle = DataGridViewCellStyle7
+        Me.Menu_DataMenu.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.Menu_DataMenu.Location = New System.Drawing.Point(0, 16)
         Me.Menu_DataMenu.Name = "Menu_DataMenu"
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Menu_DataMenu.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.Menu_DataMenu.RowHeadersWidth = 62
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Menu_DataMenu.RowsDefaultCellStyle = DataGridViewCellStyle9
         Me.Menu_DataMenu.RowTemplate.Height = 28
-        Me.Menu_DataMenu.Size = New System.Drawing.Size(626, 557)
+        Me.Menu_DataMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.Menu_DataMenu.ShowCellErrors = False
+        Me.Menu_DataMenu.ShowCellToolTips = False
+        Me.Menu_DataMenu.ShowEditingIcon = False
+        Me.Menu_DataMenu.ShowRowErrors = False
+        Me.Menu_DataMenu.Size = New System.Drawing.Size(681, 557)
         Me.Menu_DataMenu.TabIndex = 6
         '
         'Home_Panel2
@@ -436,17 +484,17 @@ Partial Class DashboardWindows
         '
         'Dashboard_Chart
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Dashboard_Chart.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Dashboard_Chart.Legends.Add(Legend1)
-        Me.Dashboard_Chart.Location = New System.Drawing.Point(11, 68)
+        ChartArea3.Name = "ChartArea1"
+        Me.Dashboard_Chart.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.Dashboard_Chart.Legends.Add(Legend3)
+        Me.Dashboard_Chart.Location = New System.Drawing.Point(0, 68)
         Me.Dashboard_Chart.Name = "Dashboard_Chart"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Dashboard_Chart.Series.Add(Series1)
-        Me.Dashboard_Chart.Size = New System.Drawing.Size(1008, 488)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Me.Dashboard_Chart.Series.Add(Series3)
+        Me.Dashboard_Chart.Size = New System.Drawing.Size(1032, 488)
         Me.Dashboard_Chart.TabIndex = 0
         Me.Dashboard_Chart.Text = "Dashboard_Chart"
         '
@@ -474,15 +522,16 @@ Partial Class DashboardWindows
         'TextBox11
         '
         Me.TextBox11.AllowDrop = True
-        Me.TextBox11.Location = New System.Drawing.Point(193, 174)
+        Me.TextBox11.Location = New System.Drawing.Point(187, 174)
         Me.TextBox11.Multiline = True
         Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.ReadOnly = True
         Me.TextBox11.Size = New System.Drawing.Size(198, 118)
         Me.TextBox11.TabIndex = 16
         '
         'Button11
         '
-        Me.Button11.Location = New System.Drawing.Point(141, 395)
+        Me.Button11.Location = New System.Drawing.Point(284, 391)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(101, 43)
         Me.Button11.TabIndex = 17
@@ -491,22 +540,25 @@ Partial Class DashboardWindows
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(193, 359)
+        Me.TextBox10.Location = New System.Drawing.Point(187, 359)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(192, 26)
+        Me.TextBox10.ReadOnly = True
+        Me.TextBox10.Size = New System.Drawing.Size(198, 26)
         Me.TextBox10.TabIndex = 15
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(193, 313)
+        Me.TextBox9.Location = New System.Drawing.Point(187, 313)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(192, 26)
+        Me.TextBox9.ReadOnly = True
+        Me.TextBox9.Size = New System.Drawing.Size(198, 26)
         Me.TextBox9.TabIndex = 14
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(193, 129)
+        Me.TextBox8.Location = New System.Drawing.Point(187, 126)
         Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.ReadOnly = True
         Me.TextBox8.Size = New System.Drawing.Size(198, 26)
         Me.TextBox8.TabIndex = 13
         '
@@ -548,7 +600,7 @@ Partial Class DashboardWindows
         '
         'Button10
         '
-        Me.Button10.Location = New System.Drawing.Point(141, 69)
+        Me.Button10.Location = New System.Drawing.Point(284, 66)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(101, 39)
         Me.Button10.TabIndex = 8
@@ -557,9 +609,9 @@ Partial Class DashboardWindows
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(250, 34)
+        Me.TextBox7.Location = New System.Drawing.Point(187, 34)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(135, 26)
+        Me.TextBox7.Size = New System.Drawing.Size(198, 26)
         Me.TextBox7.TabIndex = 7
         '
         'Label12
@@ -670,17 +722,17 @@ Partial Class DashboardWindows
         Me.Panel_Menu.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.Panel_Menu.Controls.Add(Me.Menu_DataMenu)
         Me.Panel_Menu.Controls.Add(Me.Menu_EditMenu)
-        Me.Panel_Menu.Location = New System.Drawing.Point(34, 17)
+        Me.Panel_Menu.Location = New System.Drawing.Point(12, 17)
         Me.Panel_Menu.Name = "Panel_Menu"
-        Me.Panel_Menu.Size = New System.Drawing.Size(1034, 590)
+        Me.Panel_Menu.Size = New System.Drawing.Size(1068, 590)
         Me.Panel_Menu.TabIndex = 7
         '
         'Panel_Main
         '
         Me.Panel_Main.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Panel_Main.Controls.Add(Me.Panel_Menu)
         Me.Panel_Main.Controls.Add(Me.Panel_Dashboard)
         Me.Panel_Main.Controls.Add(Me.Panel_Home)
-        Me.Panel_Main.Controls.Add(Me.Panel_Menu)
         Me.Panel_Main.Location = New System.Drawing.Point(0, 75)
         Me.Panel_Main.Name = "Panel_Main"
         Me.Panel_Main.Size = New System.Drawing.Size(1091, 632)
@@ -742,20 +794,18 @@ Partial Class DashboardWindows
     Friend WithEvents mLbl1 As Label
     Friend WithEvents mLbl4 As Label
     Friend WithEvents mLbl3 As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents menu_ubahStatusBox As ComboBox
+    Friend WithEvents menu_ubahHargaBox As TextBox
+    Friend WithEvents menu_ubahNamaBox As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Button6 As Button
     Friend WithEvents Button5 As Button
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents menu_statusBox As ComboBox
+    Friend WithEvents menu_hargaBox As TextBox
+    Friend WithEvents menu_namaBox As TextBox
     Friend WithEvents Dashboard_Chart As DataVisualization.Charting.Chart
     Friend WithEvents Button9 As Button
     Friend WithEvents Button8 As Button
@@ -778,4 +828,7 @@ Partial Class DashboardWindows
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel_Menu As Panel
     Friend WithEvents Panel_Main As Panel
+    Friend WithEvents menu_kategoriBox As ComboBox
+    Friend WithEvents menu_ubahKategoriBox As ComboBox
+    Friend WithEvents Button12 As Button
 End Class

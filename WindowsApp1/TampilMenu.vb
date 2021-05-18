@@ -35,6 +35,37 @@ Module TampilMenu
         End If
     End Sub
 
+    Public Sub atur_Grid()
+
+    End Sub
+
+    Public Sub tampil_Menu()
+        Call openConn()
+
+        cmd = New OdbcCommand("SELECT * FROM menus", conn)
+        da = New OdbcDataAdapter(cmd)
+        Dim ds = New DataSet
+        da.Fill(ds, "menus")
+        DashboardWindows.Menu_DataMenu.DataSource = ds.Tables("menus")
+
+        Try
+            DashboardWindows.Menu_DataMenu.Columns(0).Width = 30
+            DashboardWindows.Menu_DataMenu.Columns(1).Width = 80
+            DashboardWindows.Menu_DataMenu.Columns(2).Width = 140
+            DashboardWindows.Menu_DataMenu.Columns(3).Width = 80
+            DashboardWindows.Menu_DataMenu.Columns(4).Width = 50
+
+            DashboardWindows.Menu_DataMenu.Columns(0).HeaderText = "ID"
+            DashboardWindows.Menu_DataMenu.Columns(1).HeaderText = "Kategori Menu"
+            DashboardWindows.Menu_DataMenu.Columns(2).HeaderText = "Nama Menu"
+            DashboardWindows.Menu_DataMenu.Columns(3).HeaderText = "Harga"
+            DashboardWindows.Menu_DataMenu.Columns(4).HeaderText = "Jumlah dipesan"
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
 
     Public Sub tampilMC()
         mainWindow.ListMainCourse.Items.Clear()

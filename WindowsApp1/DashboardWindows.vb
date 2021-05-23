@@ -94,4 +94,20 @@ Public Class DashboardWindows
 
         Call closeConn()
     End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        Call openConn()
+
+        query = "DELETE FROM `menus` WHERE `menus`.`nama`= '" & menu_ubahNamaBox.Text & "'"
+
+        cmd = New OdbcCommand(query, conn)
+
+        Try
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+
+        Call closeConn()
+    End Sub
 End Class

@@ -22,12 +22,12 @@ Partial Class DashboardWindows
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -66,14 +66,12 @@ Partial Class DashboardWindows
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Dashboard_Chart = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Home_Pembayaran_GroupBox = New System.Windows.Forms.GroupBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
@@ -362,28 +360,28 @@ Partial Class DashboardWindows
         Me.Menu_DataMenu.AllowUserToDeleteRows = False
         Me.Menu_DataMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Menu_DataMenu.Cursor = System.Windows.Forms.Cursors.Default
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Menu_DataMenu.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Menu_DataMenu.DefaultCellStyle = DataGridViewCellStyle10
         Me.Menu_DataMenu.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.Menu_DataMenu.Location = New System.Drawing.Point(0, 16)
         Me.Menu_DataMenu.Name = "Menu_DataMenu"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Menu_DataMenu.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Menu_DataMenu.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.Menu_DataMenu.RowHeadersWidth = 62
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Menu_DataMenu.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Menu_DataMenu.RowsDefaultCellStyle = DataGridViewCellStyle12
         Me.Menu_DataMenu.RowTemplate.Height = 28
         Me.Menu_DataMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.Menu_DataMenu.ShowCellErrors = False
@@ -484,30 +482,28 @@ Partial Class DashboardWindows
         '
         'Dashboard_Chart
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Dashboard_Chart.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Dashboard_Chart.Legends.Add(Legend1)
+        ChartArea4.Name = "ChartArea1"
+        Me.Dashboard_Chart.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        Me.Dashboard_Chart.Legends.Add(Legend4)
         Me.Dashboard_Chart.Location = New System.Drawing.Point(0, 68)
         Me.Dashboard_Chart.Name = "Dashboard_Chart"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Dashboard_Chart.Series.Add(Series1)
+        Series4.ChartArea = "ChartArea1"
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        Me.Dashboard_Chart.Series.Add(Series4)
         Me.Dashboard_Chart.Size = New System.Drawing.Size(1032, 488)
         Me.Dashboard_Chart.TabIndex = 0
         Me.Dashboard_Chart.Text = "Dashboard_Chart"
         '
         'Home_Pembayaran_GroupBox
         '
-        Me.Home_Pembayaran_GroupBox.Controls.Add(Me.TextBox11)
         Me.Home_Pembayaran_GroupBox.Controls.Add(Me.Button11)
         Me.Home_Pembayaran_GroupBox.Controls.Add(Me.TextBox10)
         Me.Home_Pembayaran_GroupBox.Controls.Add(Me.TextBox9)
         Me.Home_Pembayaran_GroupBox.Controls.Add(Me.TextBox8)
         Me.Home_Pembayaran_GroupBox.Controls.Add(Me.Label16)
         Me.Home_Pembayaran_GroupBox.Controls.Add(Me.Label15)
-        Me.Home_Pembayaran_GroupBox.Controls.Add(Me.Label14)
         Me.Home_Pembayaran_GroupBox.Controls.Add(Me.Label13)
         Me.Home_Pembayaran_GroupBox.Controls.Add(Me.Button10)
         Me.Home_Pembayaran_GroupBox.Controls.Add(Me.TextBox7)
@@ -519,19 +515,9 @@ Partial Class DashboardWindows
         Me.Home_Pembayaran_GroupBox.TabStop = False
         Me.Home_Pembayaran_GroupBox.Text = "Pembayaran"
         '
-        'TextBox11
-        '
-        Me.TextBox11.AllowDrop = True
-        Me.TextBox11.Location = New System.Drawing.Point(187, 174)
-        Me.TextBox11.Multiline = True
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.ReadOnly = True
-        Me.TextBox11.Size = New System.Drawing.Size(198, 118)
-        Me.TextBox11.TabIndex = 16
-        '
         'Button11
         '
-        Me.Button11.Location = New System.Drawing.Point(284, 391)
+        Me.Button11.Location = New System.Drawing.Point(284, 253)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(101, 43)
         Me.Button11.TabIndex = 17
@@ -540,7 +526,7 @@ Partial Class DashboardWindows
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(187, 359)
+        Me.TextBox10.Location = New System.Drawing.Point(187, 211)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.ReadOnly = True
         Me.TextBox10.Size = New System.Drawing.Size(198, 26)
@@ -548,7 +534,7 @@ Partial Class DashboardWindows
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(187, 313)
+        Me.TextBox9.Location = New System.Drawing.Point(187, 165)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.ReadOnly = True
         Me.TextBox9.Size = New System.Drawing.Size(198, 26)
@@ -565,7 +551,7 @@ Partial Class DashboardWindows
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(18, 362)
+        Me.Label16.Location = New System.Drawing.Point(18, 214)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(44, 20)
         Me.Label16.TabIndex = 12
@@ -574,20 +560,11 @@ Partial Class DashboardWindows
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(18, 316)
+        Me.Label15.Location = New System.Drawing.Point(18, 168)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(60, 20)
         Me.Label15.TabIndex = 11
         Me.Label15.Text = "Jumlah"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(18, 178)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(72, 20)
-        Me.Label14.TabIndex = 10
-        Me.Label14.Text = "Pesanan"
         '
         'Label13
         '
@@ -626,11 +603,15 @@ Partial Class DashboardWindows
         'Home_GridView
         '
         Me.Home_GridView.AccessibleName = "home"
+        Me.Home_GridView.AllowUserToAddRows = False
+        Me.Home_GridView.AllowUserToDeleteRows = False
         Me.Home_GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Home_GridView.Location = New System.Drawing.Point(20, 119)
         Me.Home_GridView.Name = "Home_GridView"
+        Me.Home_GridView.ReadOnly = True
         Me.Home_GridView.RowHeadersWidth = 62
         Me.Home_GridView.RowTemplate.Height = 28
+        Me.Home_GridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.Home_GridView.Size = New System.Drawing.Size(579, 449)
         Me.Home_GridView.TabIndex = 4
         '
@@ -730,9 +711,9 @@ Partial Class DashboardWindows
         'Panel_Main
         '
         Me.Panel_Main.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Panel_Main.Controls.Add(Me.Panel_Menu)
-        Me.Panel_Main.Controls.Add(Me.Panel_Dashboard)
         Me.Panel_Main.Controls.Add(Me.Panel_Home)
+        Me.Panel_Main.Controls.Add(Me.Panel_Dashboard)
+        Me.Panel_Main.Controls.Add(Me.Panel_Menu)
         Me.Panel_Main.Location = New System.Drawing.Point(0, 75)
         Me.Panel_Main.Name = "Panel_Main"
         Me.Panel_Main.Size = New System.Drawing.Size(1091, 632)
@@ -813,13 +794,11 @@ Partial Class DashboardWindows
     Friend WithEvents Label12 As Label
     Friend WithEvents Button10 As Button
     Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox11 As TextBox
     Friend WithEvents TextBox10 As TextBox
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Button11 As Button
     Friend WithEvents Home_Pembayaran_GroupBox As GroupBox

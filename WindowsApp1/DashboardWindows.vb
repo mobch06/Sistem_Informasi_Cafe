@@ -110,4 +110,8 @@ Public Class DashboardWindows
 
         Call closeConn()
     End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        Call tampilOrder(TextBox7.Text)
+    End Sub
 End Class

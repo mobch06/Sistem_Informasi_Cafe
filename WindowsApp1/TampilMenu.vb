@@ -35,10 +35,6 @@ Module TampilMenu
         End If
     End Sub
 
-    Public Sub atur_Grid()
-
-    End Sub
-
     Public Sub tampil_Menu()
         Call openConn()
 
@@ -238,7 +234,53 @@ Module TampilMenu
     End Function
 
 
+    Public Sub tampilOrder(orderId)
+        openConn()
 
+        'Menampilkan Menu yang di order
+        Dim query As String = "SELECT `nama`,`harga`,`pesan`,`total` FROM orders WHERE order_id = '" & orderId & "' "
+        cmd = New OdbcCommand(query, conn)
+        da = New OdbcDataAdapter(cmd)
+        Dim ds = New DataSet
+        da.Fill(ds, "order")
+
+
+        DashboardWindows.Home_GridView.DataSource = ds.Tables("order")
+
+        Try
+            DashboardWindows.Home_GridView.Columns(0).HeaderText = "Nama"
+            DashboardWindows.Home_GridView.Columns(1).HeaderText = "Harga"
+            DashboardWindows.Home_GridView.Columns(2).HeaderText = "Jumlah"
+            DashboardWindows.Home_GridView.Columns(3).HeaderText = "Total"
+        Catch ex As Exception
+
+        End Try
+
+        'Menampilkan nama customer
+        Dim dr As OdbcDataReader
+        query = New String("SELECT DISTINCT username FROM orders WHERE order_id = '" & orderId & "'")
+        cmd = New OdbcCommand(query, conn)
+        da = New OdbcDataAdapter(cmd)
+        Dim dt = New DataTable
+        da.Fill(dt)
+        dr = cmd.ExecuteReader()
+        dr.Read()
+
+
+        DashboardWindows.TextBox8.Text = dt.Rows(0)("username")
+
+        'menampilkan jumlah pesanan dan total harga
+        query = New String("SELECT SUM(pesan) AS sumPesan, SUM(total) AS sumTotal FROM orders WHERE order_id = '" & orderId & "'")
+        cmd = New OdbcCommand(query, conn)
+        da = New OdbcDataAdapter(cmd)
+        dt = New DataTable
+        da.Fill(dt)
+        dr = cmd.ExecuteReader()
+        dr.Read()
+
+        DashboardWindows.TextBox9.Text = dt.Rows(0)("sumPesan").ToString()
+        DashboardWindows.TextBox10.Text = dt.Rows(0)("sumTotal").ToString()
+    End Sub
 
 
 End Module

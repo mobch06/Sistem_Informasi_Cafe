@@ -114,4 +114,21 @@ Public Class DashboardWindows
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
         Call tampilOrder(TextBox7.Text)
     End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+
+        Dim query As String = "UPDATE orders SET status = 1 WHERE order_id = '" & TextBox7.Text & "'"
+        cmd = New OdbcCommand(query, conn)
+        Try
+            cmd.ExecuteNonQuery()
+
+            Call tampilSemuaPesanan()
+            Call tampilBelumSelesai()
+            Call tampilSelesai()
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
 End Class
